@@ -1,0 +1,329 @@
+<!-- ===== HERO ===== -->
+<section class="hero-section relative overflow-hidden">
+	<div class="hero-bg" aria-hidden="true"></div>
+
+	<div class="relative mx-auto max-w-[var(--container)] px-4 py-16 sm:px-6 sm:py-24 lg:py-32">
+		<div class="max-w-3xl">
+			<div
+				class="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--c-primary)]/30 bg-[var(--c-primary)]/10 px-4 py-1.5 text-sm font-medium text-[var(--c-primary)]"
+			>
+				<span class="h-2 w-2 rounded-full bg-[var(--c-primary)] animate-pulse" aria-hidden="true"></span>
+				Кам'янець-Подільський — Офіційний автосервіс
+			</div>
+
+			<h1 class="text-4xl font-extrabold tracking-tight text-[var(--c-text-strong)] sm:text-5xl lg:text-6xl">
+				@if (company().name) {
+					{{ company().name }}
+				} @else {
+					Авто Сервіс
+				}
+			</h1>
+			<p class="mt-4 text-2xl font-semibold text-[var(--c-primary)] sm:text-3xl">
+				Надійний сервіс для вашого авто
+			</p>
+
+			<p class="mt-6 max-w-2xl text-lg leading-8 text-[var(--c-text)]">
+				Комплексне технічне обслуговування, діагностика та ремонт автомобілів усіх марок.
+				Досвідчені майстри, сучасне обладнання, гарантія на всі роботи.
+			</p>
+
+			<div class="mt-10 flex flex-wrap gap-4">
+				<a
+					href="tel:+380000000000"
+					class="inline-flex items-center gap-2 rounded-[var(--radius-btn)] bg-[var(--c-primary)] px-6 py-3.5 text-base font-semibold text-white shadow-[var(--shadow-md)] hover:bg-[var(--c-primary-hover)] theme-interactive theme-focus"
+				>
+					<span class="material-symbols-outlined">call</span>
+					Записатися зараз
+				</a>
+				<a
+					href="#services"
+					class="inline-flex items-center gap-2 rounded-[var(--radius-btn)] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] px-6 py-3.5 text-base font-semibold text-[var(--c-text-strong)] hover:border-[var(--c-primary)] hover:text-[var(--c-primary)] theme-interactive theme-focus"
+				>
+					Наші послуги
+					<span class="material-symbols-outlined">arrow_downward</span>
+				</a>
+			</div>
+
+			<div class="mt-12 flex flex-wrap gap-6">
+				<div class="flex items-center gap-2 text-sm text-[var(--c-text)]">
+					<span class="material-symbols-outlined text-[var(--c-primary)]">check_circle</span>
+					Безкоштовна діагностика
+				</div>
+				<div class="flex items-center gap-2 text-sm text-[var(--c-text)]">
+					<span class="material-symbols-outlined text-[var(--c-primary)]">check_circle</span>
+					Гарантія 12 місяців
+				</div>
+				<div class="flex items-center gap-2 text-sm text-[var(--c-text)]">
+					<span class="material-symbols-outlined text-[var(--c-primary)]">check_circle</span>
+					Оригінальні запчастини
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="border-y border-[var(--c-border)] bg-[var(--c-bg-secondary)]">
+	<div
+		class="mx-auto grid max-w-[var(--container)] grid-cols-2 gap-8 px-4 py-10 sm:px-6 lg:grid-cols-4"
+	>
+		<div class="text-center">
+			<p class="text-4xl font-extrabold text-[var(--c-primary)]">10+</p>
+			<p class="mt-1 text-sm text-[var(--c-text)]">Років досвіду</p>
+		</div>
+		<div class="text-center">
+			<p class="text-4xl font-extrabold text-[var(--c-primary)]">5000+</p>
+			<p class="mt-1 text-sm text-[var(--c-text)]">Задоволених клієнтів</p>
+		</div>
+		<div class="text-center">
+			<p class="text-4xl font-extrabold text-[var(--c-primary)]">15+</p>
+			<p class="mt-1 text-sm text-[var(--c-text)]">Майстрів у команді</p>
+		</div>
+		<div class="text-center">
+			<p class="text-4xl font-extrabold text-[var(--c-primary)]">100%</p>
+			<p class="mt-1 text-sm text-[var(--c-text)]">Гарантія якості</p>
+		</div>
+	</div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" class="mx-auto max-w-[var(--container)] px-4 py-16 sm:px-6 sm:py-24">
+	<div class="mb-12 text-center">
+		<p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--c-primary)]">
+			Що ми робимо
+		</p>
+		<h2 class="text-3xl font-bold text-[var(--c-text-strong)] sm:text-4xl">Наші послуги</h2>
+		<p class="mx-auto mt-4 max-w-xl text-base leading-7 text-[var(--c-text)]">
+			Повний спектр послуг з технічного обслуговування та ремонту автомобілів будь-яких марок та
+			моделей.
+		</p>
+	</div>
+
+	<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+		@for (service of services; track service.title) {
+			<div
+				class="group rounded-[var(--radius-card)] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] p-6 shadow-[var(--shadow-sm)] transition-all duration-200 hover:border-[var(--c-primary)]/50 hover:shadow-[var(--shadow-md)]"
+			>
+				<div
+					class="mb-4 flex h-12 w-12 items-center justify-center rounded-[var(--radius)] bg-[var(--c-primary)]/10 text-[var(--c-primary)] group-hover:bg-[var(--c-primary)] group-hover:text-white theme-interactive"
+				>
+					<span class="material-symbols-outlined">{{ service.icon }}</span>
+				</div>
+				<h3 class="mb-2 font-semibold text-[var(--c-text-strong)]">{{ service.title }}</h3>
+				<p class="text-sm leading-6 text-[var(--c-text)]">{{ service.description }}</p>
+			</div>
+		}
+	</div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section id="about" class="border-y border-[var(--c-border)] bg-[var(--c-bg-secondary)]">
+	<div class="mx-auto max-w-[var(--container)] px-4 py-16 sm:px-6 sm:py-24">
+		<div class="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+			<div>
+				<p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--c-primary)]">
+					Чому обирають нас
+				</p>
+				<h2 class="text-3xl font-bold text-[var(--c-text-strong)] sm:text-4xl">
+					Якість та надійність — наші головні цінності
+				</h2>
+				<p class="mt-5 text-base leading-7 text-[var(--c-text)]">
+					{{ company().description }}
+				</p>
+				<a
+					href="tel:+380000000000"
+					class="mt-8 inline-flex items-center gap-2 rounded-[var(--radius-btn)] bg-[var(--c-primary)] px-6 py-3.5 text-base font-semibold text-white shadow-[var(--shadow-sm)] hover:bg-[var(--c-primary-hover)] theme-interactive theme-focus"
+				>
+					<span class="material-symbols-outlined">call</span>
+					Зателефонувати
+				</a>
+			</div>
+
+			<div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+				@for (item of whyItems; track item.title) {
+					<div
+						class="rounded-[var(--radius-card)] border border-[var(--c-border)] bg-[var(--c-bg-primary)] p-5"
+					>
+						<div
+							class="mb-3 flex h-10 w-10 items-center justify-center rounded-[var(--radius)] bg-[var(--c-primary)]/10 text-[var(--c-primary)]"
+						>
+							<span class="material-symbols-outlined text-xl">{{ item.icon }}</span>
+						</div>
+						<h3 class="mb-1.5 font-semibold text-[var(--c-text-strong)]">{{ item.title }}</h3>
+						<p class="text-sm leading-6 text-[var(--c-text)]">{{ item.description }}</p>
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section id="process" class="mx-auto max-w-[var(--container)] px-4 py-16 sm:px-6 sm:py-24">
+	<div class="mb-12 text-center">
+		<p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--c-primary)]">
+			Просто та зрозуміло
+		</p>
+		<h2 class="text-3xl font-bold text-[var(--c-text-strong)] sm:text-4xl">Як ми працюємо</h2>
+	</div>
+
+	<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+		@for (step of processSteps; track step.number) {
+			<div class="relative text-center">
+				<div
+					class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full border-2 border-[var(--c-primary)]/30 bg-[var(--c-bg-secondary)] shadow-[var(--shadow-md)]"
+				>
+					<span class="material-symbols-outlined text-2xl text-[var(--c-primary)]">{{ step.icon }}</span>
+				</div>
+				<p class="mb-1 text-xs font-bold uppercase tracking-[0.2em] text-[var(--c-primary)]">
+					Крок {{ step.number }}
+				</p>
+				<h3 class="mb-2 font-semibold text-[var(--c-text-strong)]">{{ step.title }}</h3>
+				<p class="text-sm leading-6 text-[var(--c-text)]">{{ step.description }}</p>
+			</div>
+		}
+	</div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="border-y border-[var(--c-border)] bg-[var(--c-secondary)]">
+	<div class="mx-auto max-w-[var(--container)] px-4 py-16 sm:px-6 text-center">
+		<h2 class="text-3xl font-bold text-white sm:text-4xl">
+			Готові довірити нам своє авто?
+		</h2>
+		<p class="mx-auto mt-4 max-w-xl text-base leading-7 text-white/80">
+			Зателефонуйте або залиште заявку прямо зараз — ми зв'яжемося з вами протягом 15 хвилин.
+		</p>
+		<div class="mt-8 flex flex-wrap justify-center gap-4">
+			<a
+				href="tel:+380000000000"
+				class="inline-flex items-center gap-2 rounded-[var(--radius-btn)] bg-[var(--c-primary)] px-8 py-4 text-lg font-bold text-white shadow-[var(--shadow-lg)] hover:bg-[var(--c-primary-hover)] theme-interactive theme-focus"
+			>
+				<span class="material-symbols-outlined">call</span>
+				+38 (000) 000-00-00
+			</a>
+			<a
+				href="#contact"
+				class="inline-flex items-center gap-2 rounded-[var(--radius-btn)] border-2 border-white/40 bg-white/10 px-8 py-4 text-lg font-semibold text-white hover:bg-white/20 theme-interactive theme-focus"
+			>
+				Написати нам
+			</a>
+		</div>
+	</div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="mx-auto max-w-[var(--container)] px-4 py-16 sm:px-6 sm:py-24">
+	<div class="mb-12 text-center">
+		<p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--c-primary)]">
+			Знайдіть нас
+		</p>
+		<h2 class="text-3xl font-bold text-[var(--c-text-strong)] sm:text-4xl">Контакти</h2>
+	</div>
+
+	<div class="grid gap-8 lg:grid-cols-2">
+		<div class="grid gap-5 content-start">
+			<div
+				class="flex items-start gap-4 rounded-[var(--radius-card)] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] p-5 shadow-[var(--shadow-sm)]"
+			>
+				<div
+					class="flex h-11 w-11 shrink-0 items-center justify-center rounded-[var(--radius)] bg-[var(--c-primary)]/10 text-[var(--c-primary)]"
+				>
+					<span class="material-symbols-outlined">location_on</span>
+				</div>
+				<div>
+					<p class="mb-0.5 text-xs font-semibold uppercase tracking-wider text-[var(--c-text-muted)]">
+						Адреса
+					</p>
+					<p class="font-medium text-[var(--c-text-strong)]">вул. Автомобілістів, 1</p>
+					<p class="text-sm text-[var(--c-text)]">Кам'янець-Подільський, 32300</p>
+				</div>
+			</div>
+
+			<div
+				class="flex items-start gap-4 rounded-[var(--radius-card)] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] p-5 shadow-[var(--shadow-sm)]"
+			>
+				<div
+					class="flex h-11 w-11 shrink-0 items-center justify-center rounded-[var(--radius)] bg-[var(--c-primary)]/10 text-[var(--c-primary)]"
+				>
+					<span class="material-symbols-outlined">call</span>
+				</div>
+				<div>
+					<p class="mb-0.5 text-xs font-semibold uppercase tracking-wider text-[var(--c-text-muted)]">
+						Телефон
+					</p>
+					<a
+						href="tel:+380000000000"
+						class="font-medium text-[var(--c-text-strong)] hover:text-[var(--c-primary)] theme-interactive"
+					>
+						+38 (000) 000-00-00
+					</a>
+					<p class="text-sm text-[var(--c-text)]">Пн — Пт, 08:00 — 19:00</p>
+				</div>
+			</div>
+
+			<div
+				class="flex items-start gap-4 rounded-[var(--radius-card)] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] p-5 shadow-[var(--shadow-sm)]"
+			>
+				<div
+					class="flex h-11 w-11 shrink-0 items-center justify-center rounded-[var(--radius)] bg-[var(--c-primary)]/10 text-[var(--c-primary)]"
+				>
+					<span class="material-symbols-outlined">schedule</span>
+				</div>
+				<div>
+					<p class="mb-0.5 text-xs font-semibold uppercase tracking-wider text-[var(--c-text-muted)]">
+						Графік роботи
+					</p>
+					<p class="font-medium text-[var(--c-text-strong)]">Пн — Пт: 08:00 — 19:00</p>
+					<p class="text-sm text-[var(--c-text)]">Субота: 09:00 — 17:00 · Неділя: вихідний</p>
+				</div>
+			</div>
+
+			<div
+				class="flex items-start gap-4 rounded-[var(--radius-card)] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] p-5 shadow-[var(--shadow-sm)]"
+			>
+				<div
+					class="flex h-11 w-11 shrink-0 items-center justify-center rounded-[var(--radius)] bg-[var(--c-primary)]/10 text-[var(--c-primary)]"
+				>
+					<span class="material-symbols-outlined">email</span>
+				</div>
+				<div>
+					<p class="mb-0.5 text-xs font-semibold uppercase tracking-wider text-[var(--c-text-muted)]">
+						Email
+					</p>
+					<a
+						href="mailto:info&#64;nazar-auto.ua"
+						class="font-medium text-[var(--c-text-strong)] hover:text-[var(--c-primary)] theme-interactive"
+					>
+						info&#64;nazar-auto.ua
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="overflow-hidden rounded-[var(--radius-card)] border border-[var(--c-border)] shadow-[var(--shadow-md)] bg-[var(--c-bg-secondary)]"
+		>
+			<div class="flex items-center gap-3 border-b border-[var(--c-border)] p-4">
+				<span class="material-symbols-outlined text-[var(--c-primary)]">map</span>
+				<p class="text-sm font-semibold text-[var(--c-text-strong)]">Ми на карті</p>
+			</div>
+			<div class="map-placeholder flex h-80 items-center justify-center bg-[var(--c-bg-primary)]">
+				<div class="text-center">
+					<span class="material-symbols-outlined mb-3 text-5xl text-[var(--c-text-muted)]">location_on</span>
+					<p class="text-sm text-[var(--c-text-muted)]">вул. Автомобілістів, 1</p>
+					<p class="text-xs text-[var(--c-text-muted)]">Кам'янець-Подільський</p>
+					<a
+						href="https://maps.google.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="mt-4 inline-flex items-center gap-1.5 rounded-[var(--radius-btn)] border border-[var(--c-primary)] px-4 py-2 text-sm font-medium text-[var(--c-primary)] hover:bg-[var(--c-primary)] hover:text-white theme-interactive theme-focus"
+					>
+						<span class="material-symbols-outlined text-sm">open_in_new</span>
+						Відкрити в Google Maps
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

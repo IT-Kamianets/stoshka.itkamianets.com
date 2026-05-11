@@ -1,0 +1,107 @@
+<footer class="border-t border-[var(--c-border)] bg-[var(--c-bg-secondary)]">
+	<div
+		class="mx-auto grid max-w-[var(--container)] gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(12rem,0.6fr)_minmax(14rem,0.8fr)] lg:gap-16"
+	>
+		<div>
+			<div class="flex items-center gap-3 mb-4">
+				<div
+					class="flex h-10 w-10 items-center justify-center rounded-[var(--radius)] bg-[var(--c-primary)] text-white shadow-[var(--shadow-sm)]"
+				>
+					<span class="material-symbols-outlined text-xl">car_repair</span>
+				</div>
+				<div>
+					<p class="font-bold text-[var(--c-text-strong)]">
+						{{ company().name || 'Авто Сервіс' }}
+					</p>
+					<p class="text-xs text-[var(--c-text-muted)]">Офіційний автосервіс</p>
+				</div>
+			</div>
+			<p class="text-sm leading-7 text-[var(--c-text)] max-w-sm">
+				{{ company().description }}
+			</p>
+			<div class="mt-5 flex gap-3">
+				<a
+					href="tel:+380000000000"
+					class="theme-focus theme-interactive flex items-center gap-2 rounded-[var(--radius)] border border-[var(--c-border)] bg-[var(--c-bg-primary)] px-3 py-2 text-sm font-medium text-[var(--c-text-strong)] hover:border-[var(--c-primary)] hover:text-[var(--c-primary)]"
+					aria-label="Зателефонувати"
+				>
+					<span class="material-symbols-outlined text-base">call</span>
+					+38 (000) 000-00-00
+				</a>
+			</div>
+		</div>
+
+		<div>
+			<p class="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--c-text-muted)] mb-4">
+				Навігація
+			</p>
+			<nav>
+				<ul class="space-y-2.5">
+					<li>
+						<a
+							href="#services"
+							class="theme-focus text-sm text-[var(--c-text)] hover:text-[var(--c-primary)] theme-interactive"
+						>
+							Послуги
+						</a>
+					</li>
+					<li>
+						<a
+							href="#about"
+							class="theme-focus text-sm text-[var(--c-text)] hover:text-[var(--c-primary)] theme-interactive"
+						>
+							Про нас
+						</a>
+					</li>
+					<li>
+						<a
+							href="#process"
+							class="theme-focus text-sm text-[var(--c-text)] hover:text-[var(--c-primary)] theme-interactive"
+						>
+							Як ми працюємо
+						</a>
+					</li>
+					<li>
+						<a
+							href="#contact"
+							class="theme-focus text-sm text-[var(--c-text)] hover:text-[var(--c-primary)] theme-interactive"
+						>
+							Контакти
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<div>
+			<p class="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--c-text-muted)] mb-4">
+				Графік роботи
+			</p>
+			<ul class="space-y-2 text-sm text-[var(--c-text)]">
+				<li class="flex justify-between gap-4">
+					<span>Пн — Пт</span>
+					<span class="font-medium text-[var(--c-text-strong)]">08:00 — 19:00</span>
+				</li>
+				<li class="flex justify-between gap-4">
+					<span>Субота</span>
+					<span class="font-medium text-[var(--c-text-strong)]">09:00 — 17:00</span>
+				</li>
+				<li class="flex justify-between gap-4">
+					<span>Неділя</span>
+					<span class="font-medium text-[var(--c-primary)]">Вихідний</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="border-t border-[var(--c-border)]">
+		<div
+			class="mx-auto flex max-w-[var(--container)] flex-wrap items-center justify-between gap-2 px-4 py-4 text-xs text-[var(--c-text-muted)] sm:px-6"
+		>
+			<p>
+				&copy; {{ currentYear }} {{ company().name || 'Авто Сервіс' }}. Усі права захищені.
+			</p>
+			<p>Розроблено з турботою про ваше авто</p>
+		</div>
+	</div>
+</footer>
